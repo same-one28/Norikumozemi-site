@@ -1,0 +1,172 @@
+body {
+  font-family: 'Helvetica Neue', sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+header {
+  background: #004080;
+  color: white;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+.hero {
+  height: 100vh;
+  background-image: url("AdobeStock_377789425.jpeg"); /* 好きな画像に変更 */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* 写真の上に暗いフィルター */
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 2rem;
+}
+
+.hero h1 {
+  font-size: 64px;
+  margin-bottom: 0.5em;
+}
+
+.hero p {
+  font-size: 24px;
+  margin-bottom: 1.5em;
+}
+
+.hero nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.hero nav a {
+  font-size: 20px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.hero nav a:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+header h1 {
+  margin-bottom: 0.2em;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+main {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.section {
+  padding: 2rem 0;
+}
+
+.bg-light {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  margin-bottom: 2rem;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.card {
+  background: white;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.project-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.project-content img {
+  width: 100%;
+  max-width: 400px;   /* PCでは最大500px */
+  height: auto;
+}
+
+.project-content div {
+  flex: 2 1 400px;
+}
+
+.news-list {
+  list-style: none;
+  padding: 0;
+}
+
+.news-list li {
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+  border-left: 4px solid #004080;
+}
+
+.activity-image {
+  width: 100px;
+  height: auto;  /* ← 高さは画像に合わせて自動調整 */
+  max-width: 100%;  /* ← スマホ対応（画面より大きくならない） */
+}
+
+
+footer {
+  text-align: center;
+  background: #ddd;
+  padding: 1rem;
+  font-size: 0.9rem;
+  margin-top: 2rem;
+}
